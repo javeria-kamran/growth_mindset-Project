@@ -1,0 +1,3 @@
+import kagglehub
+path = kagglehub.dataset_download("patricklford/global-co-emissions")
+print("Dataset downloaded to:", path)
