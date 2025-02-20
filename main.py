@@ -9,6 +9,15 @@ from sklearn.linear_model import LinearRegression
 
 st.title("🌍 Global CO2 Emissions Dashboard")
 
+def download_dataset():
+    url = "https://www.kaggleusercontent.com/path/to/dataset.csv"
+    if not os.path.exists("dataset.csv"):
+        response = requests.get(url)
+        with open("dataset.csv", "wb") as f:
+            f.write(response.content)
+
+download_dataset()
+
 # Download dataset
 @st.cache_data
 def load_data():
@@ -139,8 +148,8 @@ if not filtered_df.empty:
     fig_bar = px.bar(latest_data, x=mapped_columns["year"], y=mapped_columns["co2"],
                      title=f"CO2 Emissions in {latest_year}")
     st.plotly_chart(fig_bar)
-    
-     # Forecasting CO2 Emissions
+
+# Forecasting CO2 Emissions
 def forecast_emissions(df, years=10):
     year_column = df[mapped_columns["year"]]
     co2_column = df[mapped_columns["co2"]]
