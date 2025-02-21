@@ -205,4 +205,3 @@ st.sidebar.info("CO₂ emissions trap heat in the atmosphere, causing global tem
 st.sidebar.header("💡 How to Reduce CO₂ Emissions")
 st.sidebar.write("- Use renewable energy sources\n- Promote energy efficiency\n- Support carbon capture technologies\n- Encourage sustainable transportation\n- Plant trees and protect forests")
 
-st.success("✅ Dashboard Loaded Successfully!")
