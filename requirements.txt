@@ -1,7 +1,8 @@
 streamlit
+kagglehub
 pandas
 numpy
 plotly
 scikit-learn
 requests
-kagglehub
+
